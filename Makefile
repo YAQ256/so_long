@@ -6,7 +6,7 @@
 #    By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 13:51:55 by cyacoub-          #+#    #+#              #
-#    Updated: 2022/11/08 15:18:54 by cyacoub-         ###   ########.fr        #
+#    Updated: 2022/11/08 15:19:31 by cyacoub-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME = so_long
 
 CC = gcc
 CFLAGS = -Werror -Wall -Wextra
-MLB_FLAGS =
 RM = rm -rf
 
 SRC = 
