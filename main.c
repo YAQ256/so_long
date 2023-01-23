@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:13:30 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/12/20 15:37:56 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2022/12/20 17:13:23 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,8 +104,8 @@ int	main(void)
 {
 	t_vars	vars;
 	t_param	img;
-	vars.slime_pos_x = 100;
-	vars.slime_pos_y = 100;
+	vars.slime_pos_x = 500;
+	vars.slime_pos_y = 500;
 	
 	vars.mlx = mlx_init();
 	vars.win = mlx_new_window(vars.mlx, 1920, 1080, "Juego Pre-Alpha");
@@ -114,7 +114,7 @@ int	main(void)
 	//mlx_hook(vars.win, 6, 0, detectmouse, &vars);
 	img.img = mlx_xpm_file_to_image (vars.mlx, "/Users/cyacoub-/Desktop/so_long/charmander.xpm", &img.img_width, &img.img_height);
 	//mlx_loop_hook(vars.mlx, render_next_frame, up);
-	mlx_put_image_to_window(vars.mlx, vars.win, img.img, 100, 100);
+	//mlx_put_image_to_window(vars.mlx, vars.win, img.img, 100, 100);
 	mlx_hook(vars.win, 17, 0, redcross, &vars);
 	mlx_key_hook(vars.win, keypress, &vars);
 	//mlx_key_hook(vars.win, move, &vars);
