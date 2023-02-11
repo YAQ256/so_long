@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-void    read_map(t_game *game)
+void	read_map(t_game *game)
 {
 	int fd;
 	char *line;

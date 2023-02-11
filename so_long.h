@@ -50,6 +50,8 @@ typedef struct	s_game
 
 void	player_xpm(t_game *game);
 void	map_xpm(t_game *game);
+void	read_map(t_game *game);
+
 
 
 //===SETTINGS 	COLORS===/

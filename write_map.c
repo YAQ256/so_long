@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 16:20:44 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/11 16:34:48 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/11 17:06:26 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	write_map_w(t_game *game)
 		while (game->map.width)
 		{
 			k++;
-			j++;1
+			j++;
 		}
 		i++;
 	}
