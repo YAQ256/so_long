@@ -1,12 +1,12 @@
 #ifndef SO_LONG_H
-#define SO_LONG_H
+# define SO_LONG_H
 
-#include "mlx/mlx.h"
-#include "libft/libft.h"
+# include "mlx/mlx.h"
+# include "libft/libft.h"
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
 
 # define KEY_ESC			53
 # define KEY_W				13
