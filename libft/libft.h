@@ -6,17 +6,20 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 19:01:23 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/12 16:37:41 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:25:07 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <unistd.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <ctype.h>
 # include <string.h>
+# include <fcntl.h>
+# include <limits.h>
 # include <stdint.h>
 
 typedef struct s_list
@@ -24,6 +27,10 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
 int		ft_atoi(const char *str);
 size_t	ft_strlen(const char *str);
@@ -68,5 +75,12 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+char	*get_next_line(int fd);
+size_t	ft_strlen_gnl(char *str);
+char	*ft_strjoin_gnl(char *s1, char *s2);
+char	*ft_strchr_gnl(char *str, int c);
+char	*ft_strdup_without_nl(char *s);
+char	*ft_strjoin_without_nl(char *s1, char *s2);
 
 #endif

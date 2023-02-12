@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 14:05:17 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/11 13:46:58 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:17:28 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char	*ft_stash(char *stash)
 		free(stash);
 		return (0);
 	}
-	str = malloc(sizeof(char) * (ft_strlen(stash) - i + 1));
+	str = malloc(sizeof(char) * (ft_strlen_gnl(stash) - i + 1));
 	if (!str)
 		return (0);
 	i++;
@@ -75,7 +75,7 @@ static char	*ft_read_and_stash(int fd, char *stash)
 	if (!buf)
 		return (0);
 	readed = 1;
-	while (!ft_strchr(stash, '\n') && readed != 0)
+	while (!ft_strchr_gnl(stash, '\n') && readed != 0)
 	{
 		readed = read(fd, buf, BUFFER_SIZE);
 		if (readed < 0)
@@ -84,7 +84,7 @@ static char	*ft_read_and_stash(int fd, char *stash)
 			return (0);
 		}
 		buf[readed] = '\0';
-		stash = ft_strjoin(stash, buf);
+		stash = ft_strjoin_gnl(stash, buf);
 	}
 	free(buf);
 	return (stash);

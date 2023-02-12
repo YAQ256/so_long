@@ -37,7 +37,11 @@ SRC = ft_atoi.c\
 			ft_itoa.c\
 			ft_strmapi.c\
 			ft_striteri.c\
-			ft_split.c
+			ft_split.c\
+			get_next_line.c\
+			get_next_line_utils.c\
+			ft_strdup_without_nl.c\
+			ft_strjoin_without_nl.c
 
 OBJS = $(SRC:.c=.o)
 
