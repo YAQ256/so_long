@@ -6,7 +6,7 @@
 #    By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 13:51:55 by cyacoub-          #+#    #+#              #
-#    Updated: 2023/02/11 16:47:02 by cyacoub-         ###   ########.fr        #
+#    Updated: 2023/02/13 11:33:25 by cyacoub-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ MLX_FLAGS = -framework OpenGL -framework AppKit
 LIBFT = ./libft/libft.a
 MLX = ./mlx/libmlx.a
 MAIN = so_long.c
-SRC = map_read.c
+SRC = read_map.c\
 
 OBJS = $(SRC:.c=.o)
 
