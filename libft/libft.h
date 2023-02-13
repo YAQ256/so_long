@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 19:01:23 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/12 17:25:07 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:25:36 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_list
 # endif
 
 int		ft_atoi(const char *str);
-size_t	ft_strlen(const char *str);
+int		ft_strlen(const char *str);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

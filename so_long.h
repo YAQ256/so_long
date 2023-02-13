@@ -26,6 +26,8 @@ typedef struct	s_player
 {
 	void	*player_right;
 	void	*player_left;
+	void	*player_back;
+	void	*steps;
 }				t_player;
 
 typedef struct	s_map
@@ -34,8 +36,11 @@ typedef struct	s_map
 	int		height;
 	int		width;
 	void	*map_img;
-	void	*cell;
+	void	*cell[3];
 	void	*wall;
+	void	*potion;
+	void	*all_potion;
+	void	*exit;
 }				t_map;
 
 typedef struct	s_game
@@ -51,6 +56,14 @@ typedef struct	s_game
 void	player_xpm(t_game *game);
 void	map_xpm(t_game *game);
 void	read_map(t_game *game);
+void	write_map_w(t_game *game);
+void	write_map_a(t_game *game);
+void	write_map_s(t_game *game);
+void	write_map_d(t_game *game);
+void	end_game(t_game *game);
+void	move_w(t_game *game);
+int		redcross(t_game *game);
+int		press_key(int key_code, t_game *game);
 
 
 

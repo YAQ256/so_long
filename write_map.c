@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 16:20:44 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/13 11:34:57 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/13 18:29:21 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,138 @@ void	write_map_w(t_game *game)
 		while (j < game->map.width)
 		{
 			if (game->map.line[k] == '1')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
 				mlx_put_image_to_window(game->mlx, game->win, game->map.wall, j * 32, i * 32);
+			}
+			else if (game->map.line[k] == 'P')
+				mlx_put_image_to_window(game->mlx, game->win, game->player.player_back, j * 32, i * 32);
+			else if (game->map.line[k] == 'E')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.exit, j * 32, i * 32);
+			}
+			else if (game->map.line[k] == 'C')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.potion, j * 32, i * 32);
+			}
+			else
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+			k++;
+			j++;
+		}
+		i++;
+	}
+}
+void	write_map_a(t_game *game)
+{
+	int i;
+	int j;
+	int k;
+
+	i = 0;
+	k = 0;
+	while (i < game->map.height)
+	{
+		j = 0;
+		while (j < game->map.width)
+		{
+			if (game->map.line[k] == '1')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.wall, j * 32, i * 32);
+			}
 			else if (game->map.line[k] == 'P')
 				mlx_put_image_to_window(game->mlx, game->win, game->player.player_left, j * 32, i * 32);
-			/* else if (game->map.line[k] == 'E')
-				mlx_put_image_to_window(game->mlx, game->win, game->map.cell, j * 32, i * 32); */
+			else if (game->map.line[k] == 'E')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.exit, j * 32, i * 32);
+			}
+			else if (game->map.line[k] == 'C')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.potion, j * 32, i * 32);
+			}
 			else
-				mlx_put_image_to_window(game->mlx, game->win, game->map.cell, j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+			k++;
+			j++;
+		}
+		i++;
+	}
+}
+void	write_map_s(t_game *game)
+{
+	int i;
+	int j;
+	int k;
+
+	i = 0;
+	k = 0;
+	while (i < game->map.height)
+	{
+		j = 0;
+		while (j < game->map.width)
+		{
+			if (game->map.line[k] == '1')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.wall, j * 32, i * 32);
+			}
+			else if (game->map.line[k] == 'P')
+				mlx_put_image_to_window(game->mlx, game->win, game->player.player_right, j * 32, i * 32);
+			else if (game->map.line[k] == 'E')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.exit, j * 32, i * 32);
+			}
+			else if (game->map.line[k] == 'C')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.potion, j * 32, i * 32);
+			}
+			else
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+			k++;
+			j++;
+		}
+		i++;
+	}
+}
+void	write_map_d(t_game *game)
+{
+	int i;
+	int j;
+	int k;
+
+	i = 0;
+	k = 0;
+	while (i < game->map.height)
+	{
+		j = 0;
+		while (j < game->map.width)
+		{
+			if (game->map.line[k] == '1')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.wall, j * 32, i * 32);
+			}
+			else if (game->map.line[k] == 'P')
+				mlx_put_image_to_window(game->mlx, game->win, game->player.player_right, j * 32, i * 32);
+			else if (game->map.line[k] == 'E')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.exit, j * 32, i * 32);
+			}
+			else if (game->map.line[k] == 'C')
+			{
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
+				mlx_put_image_to_window(game->mlx, game->win, game->map.potion, j * 32, i * 32);
+			}
+			else
+				mlx_put_image_to_window(game->mlx, game->win, game->map.cell[2], j * 32, i * 32);
 			k++;
 			j++;
 		}
