@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:59:03 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/13 18:28:48 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:58:17 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	map_xpm(t_game *game)
 	game->map.cell[1] = mlx_xpm_file_to_image(game->mlx, "./xpm/grass2.xpm", &game->img_width, &game->img_height);
 	game->map.cell[2] = mlx_xpm_file_to_image(game->mlx, "./xpm/grass3.xpm", &game->img_width, &game->img_height);
 	game->map.wall = mlx_xpm_file_to_image(game->mlx, "./xpm/rock.xpm", &game->img_width, &game->img_height);
-	game->map.potion = mlx_xpm_file_to_image(game->mlx, "./xpm/potion.xpm", &game->img_width, &game->img_height);
 	game->map.exit = mlx_xpm_file_to_image(game->mlx, "./xpm/exit.xpm", &game->img_width, &game->img_height);
+	game->map.potion_img = mlx_xpm_file_to_image(game->mlx, "./xpm/potion.xpm", &game->img_width, &game->img_height);
+	game->map.enemy_left = mlx_xpm_file_to_image(game->mlx, "./xpm/enemy_left.xpm", &game->img_width, &game->img_height);
+	game->map.enemy_right = mlx_xpm_file_to_image(game->mlx, "./xpm/enemy_right.xpm", &game->img_width, &game->img_height);
 }

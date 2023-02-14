@@ -6,7 +6,7 @@
 #    By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 13:51:55 by cyacoub-          #+#    #+#              #
-#    Updated: 2023/02/13 16:53:13 by cyacoub-         ###   ########.fr        #
+#    Updated: 2023/02/14 13:31:20 by cyacoub-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ MAIN = so_long.c
 SRC = 	read_map.c\
 		write_map.c\
 		xpm_variable.c\
-		hooks.c
+		hooks.c\
+		steps.c
 
 OBJS = $(SRC:.c=.o)
 
