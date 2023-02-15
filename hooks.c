@@ -6,35 +6,31 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 18:07:32 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/14 15:38:35 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/15 19:00:49 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	end_game(t_game *game)
-{
-	mlx_destroy_window(game->mlx, game->win);
-	exit(0);
-}
-
 void	move_w(t_game *game)
 {
-	int i = 0;
-	
+	int	i;
+
 	i = 0;
 	while (i++ < (int)ft_strlen(game->map.line))
 	{
 		if (game->map.line[i] == 'P')
-			break;
+			break ;
 	}
 	if (game->map.line[i - game->map.width] == 'C')
 			game->map.potion++;
-	if (game->map.line[i - game->map.width] == 'E' && game->map.potion == game->map.all_potion)
+	if (game->map.line[i - game->map.width] == 'E' && game->map.potion
+		== game->map.all_potion)
 		end_game(game);
 	if (game->map.line[i - game->map.width] == 'M')
 		end_game(game);
-	else if (game->map.line[i - game->map.width] != '1' && game->map.line[i - game->map.width] != 'E')
+	else if (game->map.line[i - game->map.width] != '1'
+		&& game->map.line[i - game->map.width] != 'E')
 	{
 		game->map.line[i] = '0';
 		game->map.line[i - game->map.width] = 'P';
@@ -43,23 +39,26 @@ void	move_w(t_game *game)
 		write_map_w(game);
 	}
 }
+
 void	move_s(t_game *game)
 {
-	int i = 0;
-	
+	int	i;
+
 	i = 0;
 	while (i++ < (int)ft_strlen(game->map.line))
 	{
 		if (game->map.line[i] == 'P')
-			break;
+			break ;
 	}
 	if (game->map.line[i + game->map.width] == 'C')
 			game->map.potion++;
-	if (game->map.line[i + game->map.width] == 'E' && game->map.potion == game->map.all_potion)
+	if (game->map.line[i + game->map.width] == 'E'
+		&& game->map.potion == game->map.all_potion)
 		end_game(game);
 	if (game->map.line[i + game->map.width] == 'M')
 		end_game(game);
-	else if (game->map.line[i + game->map.width] != '1' && game->map.line[i + game->map.width] != 'E')
+	else if (game->map.line[i + game->map.width] != '1'
+		&& game->map.line[i + game->map.width] != 'E')
 	{
 		game->map.line[i] = '0';
 		game->map.line[i + game->map.width] = 'P';
@@ -68,23 +67,26 @@ void	move_s(t_game *game)
 		write_map_s(game);
 	}
 }
+
 void	move_d(t_game *game)
 {
-	int i = 0;
-	
+	int	i;
+
 	i = 0;
 	while (i++ < (int)ft_strlen(game->map.line))
 	{
 		if (game->map.line[i] == 'P')
-			break;
+			break ;
 	}
 	if (game->map.line[i + 1] == 'C')
 			game->map.potion++;
-	if (game->map.line[i + 1] == 'E' && game->map.potion == game->map.all_potion)
+	if (game->map.line[i + 1] == 'E'
+		&& game->map.potion == game->map.all_potion)
 		end_game(game);
 	if (game->map.line[i + 1] == 'M')
 		end_game(game);
-	else if (game->map.line[i + 1] != '1' && game->map.line[i + 1] != 'E')
+	else if (game->map.line[i + 1] != '1'
+		&& game->map.line[i + 1] != 'E')
 	{
 		game->map.line[i] = '0';
 		game->map.line[i + 1] = 'P';
@@ -93,23 +95,26 @@ void	move_d(t_game *game)
 		write_map_d(game);
 	}
 }
+
 void	move_a(t_game *game)
 {
-	int i = 0;
-	
+	int	i;
+
 	i = 0;
 	while (i++ < (int)ft_strlen(game->map.line))
 	{
 		if (game->map.line[i] == 'P')
-			break;
+			break ;
 	}
 	if (game->map.line[i - 1] == 'C')
 			game->map.potion++;
-	if (game->map.line[i - 1] == 'E' && game->map.potion == game->map.all_potion)
+	if (game->map.line[i - 1] == 'E'
+		&& game->map.potion == game->map.all_potion)
 		end_game(game);
 	if (game->map.line[i - 1] == 'M')
 		end_game(game);
-	else if (game->map.line[i - 1] != '1' && game->map.line[i - 1] != 'E')
+	else if (game->map.line[i - 1] != '1'
+		&& game->map.line[i - 1] != 'E')
 	{
 		game->map.line[i] = '0';
 		game->map.line[i - 1] = 'P';
@@ -124,12 +129,24 @@ int	press_key(int key_code, t_game *game)
 	if (key_code == KEY_ESC)
 		end_game(game);
 	if (key_code == KEY_W)
+	{
 		move_w(game);
+		enemy_move(game);
+	}
 	if (key_code == KEY_A)
+	{
 		move_a(game);
+		enemy_move(game);
+	}
 	if (key_code == KEY_S)
+	{
 		move_s(game);
+		enemy_move(game);
+	}
 	if (key_code == KEY_D)
+	{
 		move_d(game);
+		enemy_move(game);
+	}
 	return (0);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/15 19:02:24 by cyacoub-          #+#    #+#             */
+/*   Updated: 2023/02/15 19:08:59 by cyacoub-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
@@ -22,16 +34,20 @@
 # define PLAYER			32
 # define EXIT_ERROR		1
 
-typedef struct	s_player
+typedef struct s_player
 {
 	void	*player_right;
+	void	*player_right_1;
+	int		player_right_1_flg;
 	void	*player_left;
+	void	*player_left_1;
+	int		player_left_1_flg;
 	void	*player_back;
 	int		steps;
 	int		steps_flg;
 }				t_player;
 
-typedef struct	s_map
+typedef struct s_map
 {
 	char	*line;
 	int		height;
@@ -42,13 +58,14 @@ typedef struct	s_map
 	void	*enemy_left;
 	void	*enemy_right;
 	int		enemy_pos;
+	int		enemy_flg;
 	void	*potion_img;
 	int		potion;
 	int		all_potion;
 	void	*exit;
 }				t_map;
 
-typedef struct	s_game
+typedef struct s_game
 {
 	void		*mlx;
 	void		*win;
@@ -60,6 +77,7 @@ typedef struct	s_game
 
 void	player_xpm(t_game *game);
 void	map_xpm(t_game *game);
+void	sprites_xpm(t_game *game);
 void	read_map(t_game *game);
 void	write_map_w(t_game *game);
 void	write_map_a(t_game *game);
@@ -70,8 +88,14 @@ void	move_w(t_game *game);
 int		redcross(t_game *game);
 int		press_key(int key_code, t_game *game);
 int		t_win_steps(t_game *game);
-
-
+void	check_map(t_game *game);
+void	check_map2(t_game *game);
+void	enemy_move(t_game *game);
+void	put_rocks_exit(t_game *game, int j, int i, int k);
+void	put_potions_enemys(t_game *game, int j, int i, int k);
+void	put_player_back(t_game *game, int j, int i);
+void	put_player_right(t_game *game, int j, int i);
+void	put_player_left(t_game *game, int j, int i);
 
 //===SETTINGS 	COLORS===/
 //===Color font code===/

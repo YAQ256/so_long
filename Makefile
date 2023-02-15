@@ -6,7 +6,7 @@
 #    By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 13:51:55 by cyacoub-          #+#    #+#              #
-#    Updated: 2023/02/14 13:31:20 by cyacoub-         ###   ########.fr        #
+#    Updated: 2023/02/15 16:09:24 by cyacoub-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,11 @@ SRC = 	read_map.c\
 		write_map.c\
 		xpm_variable.c\
 		hooks.c\
-		steps.c
+		steps.c\
+		map_errors.c\
+		map_errors2.c\
+		enemy_move.c\
+		put_images.c
 
 OBJS = $(SRC:.c=.o)
 
