@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 14:42:55 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/11 14:49:15 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/21 18:30:16 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ char	*ft_strjoin_without_nl(char *s1, char *s2)
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	else if (s1 == NULL)
-		return (ft_strdup_without_nl(s2));
+		return (s2);
 	else if (s2 == NULL)
-		return (ft_strdup_without_nl(s1));
+		return (s1);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	new_mem = malloc(s1_len + s2_len);
