@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:44:22 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/21 18:21:31 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/21 20:55:53 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ void	read_map(t_game *game, char *str)
 	char	*line;
 
 	fd = open(str, O_RDONLY);
+	if (fd == -1)
+		put_error_message("Error: the map does not exist");
 	line = get_next_line(fd);
 	game->map.height = 0;
 	game->map.width = ft_strlen(line) - 1;

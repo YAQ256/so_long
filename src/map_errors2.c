@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:29:57 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/21 19:14:24 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/22 15:40:29 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	put_invalid_path(void)
 	put_error_message("-------------------------\n");
 	exit(EXIT_ERROR);
 }
-
 
 int	check_ber(char *str)
 {

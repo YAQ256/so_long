@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:02:24 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/21 19:13:34 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/22 15:40:57 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,14 @@ void	put_player_right(t_game *game, int j, int i);
 void	put_player_left(t_game *game, int j, int i);
 void	put_error_message(char *str);
 int		search_route_exit(t_game *game);
-void	put_invalid_path();
+void	put_invalid_path(void);
 void	check_rectangular(char *line, t_game *game);
 void	check_unrecognized(char *line);
 int		check_ber(char *str);
 void	xpm_error(void);
+void	win_game(t_game *game);
+void	lost_game(t_game *game);
+void	check_nmax_elements_utis(int e, int p, int m);
 
 //===SETTINGS 	COLORS===/
 //===Color font code===/

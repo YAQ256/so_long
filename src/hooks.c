@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 18:07:32 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/16 16:26:55 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:53:26 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void	move_w(t_game *game)
 			game->map.potion++;
 	if (game->map.line[i - game->map.width] == 'E' && game->map.potion
 		== game->map.all_potion)
-		end_game(game);
+		win_game(game);
 	if (game->map.line[i - game->map.width] == 'M')
-		end_game(game);
+		lost_game(game);
 	else if (game->map.line[i - game->map.width] != '1'
 		&& game->map.line[i - game->map.width] != 'E')
 	{
@@ -54,9 +54,9 @@ void	move_s(t_game *game)
 			game->map.potion++;
 	if (game->map.line[i + game->map.width] == 'E'
 		&& game->map.potion == game->map.all_potion)
-		end_game(game);
+		win_game(game);
 	if (game->map.line[i + game->map.width] == 'M')
-		end_game(game);
+		lost_game(game);
 	else if (game->map.line[i + game->map.width] != '1'
 		&& game->map.line[i + game->map.width] != 'E')
 	{
@@ -82,9 +82,9 @@ void	move_d(t_game *game)
 			game->map.potion++;
 	if (game->map.line[i + 1] == 'E'
 		&& game->map.potion == game->map.all_potion)
-		end_game(game);
+		win_game(game);
 	if (game->map.line[i + 1] == 'M')
-		end_game(game);
+		lost_game(game);
 	else if (game->map.line[i + 1] != '1'
 		&& game->map.line[i + 1] != 'E')
 	{
@@ -110,9 +110,9 @@ void	move_a(t_game *game)
 			game->map.potion++;
 	if (game->map.line[i - 1] == 'E'
 		&& game->map.potion == game->map.all_potion)
-		end_game(game);
+		win_game(game);
 	if (game->map.line[i - 1] == 'M')
-		end_game(game);
+		lost_game(game);
 	else if (game->map.line[i - 1] != '1'
 		&& game->map.line[i - 1] != 'E')
 	{

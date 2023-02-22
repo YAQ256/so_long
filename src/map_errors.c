@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:33:02 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/21 18:19:11 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/22 15:01:07 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	check_elements_utis(int e, int c, int p)
 {
-	if (e != 1 || c != 1 || p != 1)
+	if (e < 1 || c < 1 || p < 1)
 	{
 		ft_putstr_fd(RED"Error:\n"RESET, 1);
 		ft_putstr_fd(RED"-------------------------\n"RESET, 1);
@@ -31,22 +31,27 @@ static void	check_elements(char *line)
 	int	e;
 	int	c;
 	int	p;
+	int	m;
 
 	i = 0;
 	e = 0;
 	c = 0;
 	p = 0;
+	m = 0;
 	while (line[i])
 	{
 		if (line[i] == 'E')
-			e = 1;
+			e++;
 		if (line[i] == 'C')
-			c = 1;
+			c++;
 		if (line[i] == 'P')
-			p = 1;
+			p++;
+		if (line[i] == 'M')
+			m++;
 		i++;
 	}
 	check_elements_utis(e, c, p);
+	check_nmax_elements_utis(e, p, m);
 }
 
 static void	check_walls_conditions(char *line, t_game *game, int i)

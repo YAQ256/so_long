@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/08 13:51:55 by cyacoub-          #+#    #+#              #
-#    Updated: 2023/02/21 18:29:06 by cyacoub-         ###   ########.fr        #
+#    Created: 2023/02/22 15:42:10 by cyacoub-          #+#    #+#              #
+#    Updated: 2023/02/22 15:43:13 by cyacoub-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,9 +29,11 @@ SRC = 	so_long.c\
 		steps.c\
 		map_errors.c\
 		map_errors2.c\
+		map_errors3.c\
 		enemy_move.c\
 		put_images.c\
-		map_route.c
+		map_route.c\
+		win_lost.c
 
 SRCS = $(addprefix $(SRC_PATH), $(SRC))
 
