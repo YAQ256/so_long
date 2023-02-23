@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:02:24 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/23 12:25:48 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 12:43:45 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG__BONUS_H
 
 # include "../mlx/mlx.h"
 # include "../libft/libft.h"
