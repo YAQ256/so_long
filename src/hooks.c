@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 18:07:32 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/21 19:53:26 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:41:44 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ void	move_w(t_game *game)
 	if (game->map.line[i - game->map.width] == 'E' && game->map.potion
 		== game->map.all_potion)
 		win_game(game);
-	if (game->map.line[i - game->map.width] == 'M')
-		lost_game(game);
 	else if (game->map.line[i - game->map.width] != '1'
 		&& game->map.line[i - game->map.width] != 'E')
 	{
@@ -55,8 +53,6 @@ void	move_s(t_game *game)
 	if (game->map.line[i + game->map.width] == 'E'
 		&& game->map.potion == game->map.all_potion)
 		win_game(game);
-	if (game->map.line[i + game->map.width] == 'M')
-		lost_game(game);
 	else if (game->map.line[i + game->map.width] != '1'
 		&& game->map.line[i + game->map.width] != 'E')
 	{
@@ -83,8 +79,6 @@ void	move_d(t_game *game)
 	if (game->map.line[i + 1] == 'E'
 		&& game->map.potion == game->map.all_potion)
 		win_game(game);
-	if (game->map.line[i + 1] == 'M')
-		lost_game(game);
 	else if (game->map.line[i + 1] != '1'
 		&& game->map.line[i + 1] != 'E')
 	{
@@ -111,8 +105,6 @@ void	move_a(t_game *game)
 	if (game->map.line[i - 1] == 'E'
 		&& game->map.potion == game->map.all_potion)
 		win_game(game);
-	if (game->map.line[i - 1] == 'M')
-		lost_game(game);
 	else if (game->map.line[i - 1] != '1'
 		&& game->map.line[i - 1] != 'E')
 	{
@@ -129,24 +121,12 @@ int	press_key(int key_code, t_game *game)
 	if (key_code == KEY_ESC)
 		end_game(game);
 	if (key_code == KEY_W)
-	{
 		move_w(game);
-		enemy_move(game);
-	}
 	if (key_code == KEY_A)
-	{
 		move_a(game);
-		enemy_move(game);
-	}
 	if (key_code == KEY_S)
-	{
 		move_s(game);
-		enemy_move(game);
-	}
 	if (key_code == KEY_D)
-	{
 		move_d(game);
-		enemy_move(game);
-	}
 	return (0);
 }

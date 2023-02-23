@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:13:30 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/23 19:38:03 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:45:17 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ int	main(int argc, char *argv[])
 	game.player.player_left_1_flg = 0;
 	game.player.player_right_1_flg = 0;
 	game.map.potion = 0;
-	game.map.enemy_pos = 0;
 	write_map_s(&game);
 	mlx_key_hook(game.win, press_key, &game);
 	mlx_loop_hook(game.mlx, &loop_hook, &game);

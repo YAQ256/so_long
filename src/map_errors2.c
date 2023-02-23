@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:29:57 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/22 15:40:29 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:43:32 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	check_unrecognized(char *line)
 	while (line[i])
 	{
 		if (line[i] != 'E' && line[i] != 'C' && line[i] != 'P'
-			&& line[i] != '0' && line[i] != '1' && line[i] != 'M')
+			&& line[i] != '0' && line[i] != '1')
 		{
 			ft_putstr_fd(RED"-------------------------\n"RESET, 1);
 			ft_putstr_fd(RED"Error:\n"RESET, 1);

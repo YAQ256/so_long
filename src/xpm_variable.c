@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:59:03 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/23 19:22:52 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:47:23 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,8 @@ void	map_xpm(t_game *game)
 			"./textures/exit.xpm", &game->img_width, &game->img_height);
 	game->map.potion_img = mlx_xpm_file_to_image(game->mlx,
 			"./textures/potion.xpm", &game->img_width, &game->img_height);
-	game->map.enemy_left = mlx_xpm_file_to_image(game->mlx,
-			"./textures/enemy_left.xpm", &game->img_width, &game->img_height);
 	if (!(game->map.cell || game->map.wall || game->map.exit
-			|| game->map.potion_img || game->map.enemy_left))
+			|| game->map.potion_img))
 		xpm_error();
 }
 

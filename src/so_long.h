@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:02:24 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/23 12:25:48 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:50:47 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,6 @@ typedef struct s_map
 	int		width;
 	void	*cell;
 	void	*wall;
-	void	*enemy_left;
-	void	*enemy_right;
-	int		enemy_pos;
-	int		enemy_flg;
 	void	*potion_img;
 	int		potion;
 	int		all_potion;
@@ -90,9 +86,8 @@ int		press_key(int key_code, t_game *game);
 int		t_win_steps(t_game *game);
 void	check_map(t_game *game);
 void	check_map2(t_game *game);
-void	enemy_move(t_game *game);
 void	put_rocks_exit(t_game *game, int j, int i, int k);
-void	put_potions_enemys(t_game *game, int j, int i, int k);
+void	put_potions(t_game *game, int j, int i);
 void	put_player_back(t_game *game, int j, int i);
 void	put_player_right(t_game *game, int j, int i);
 void	put_player_left(t_game *game, int j, int i);
@@ -105,7 +100,7 @@ int		check_ber(char *str);
 void	xpm_error(void);
 void	win_game(t_game *game);
 void	lost_game(t_game *game);
-void	check_nmax_elements_utis(int e, int p, int m);
+void	check_nmax_elements_utis(int e, int p);
 
 //===SETTINGS 	COLORS===/
 //===Color font code===/

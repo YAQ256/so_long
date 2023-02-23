@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:58:38 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/21 18:05:46 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:49:50 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,12 @@ void	put_rocks_exit(t_game *game, int j, int i, int k)
 	}
 }
 
-void	put_potions_enemys(t_game *game, int j, int i, int k)
+void	put_potions(t_game *game, int j, int i)
 {
-	if (game->map.line[k] == 'C')
-	{
-		mlx_put_image_to_window(game->mlx, game->win,
-			game->map.cell, j * 32, i * 32);
-		mlx_put_image_to_window(game->mlx, game->win,
-			game->map.potion_img, j * 32, i * 32);
-	}
-	else if (game->map.line[k] == 'M')
-	{
-		mlx_put_image_to_window(game->mlx, game->win,
-			game->map.cell, j * 32, i * 32);
-		mlx_put_image_to_window(game->mlx, game->win,
-			game->map.enemy_left, j * 32, i * 32);
-	}
+	mlx_put_image_to_window(game->mlx, game->win,
+		game->map.cell, j * 32, i * 32);
+	mlx_put_image_to_window(game->mlx, game->win,
+		game->map.potion_img, j * 32, i * 32);
 }
 
 void	put_player_back(t_game *game, int j, int i)

@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 16:20:44 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/21 18:06:14 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:51:23 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	write_map_w(t_game *game)
 				put_rocks_exit(game, j, i, k);
 			else if (game->map.line[k] == 'P')
 				put_player_back(game, j, i);
-			else if (game->map.line[k] == 'C' || game->map.line[k] == 'M')
-				put_potions_enemys(game, j, i, k);
+			else if (game->map.line[k] == 'C')
+				put_potions(game, j, i);
 			else
 				mlx_put_image_to_window(game->mlx, game->win,
 					game->map.cell, j * 32, i * 32);
@@ -58,8 +58,8 @@ void	write_map_s(t_game *game)
 				put_rocks_exit(game, j, i, k);
 			else if (game->map.line[k] == 'P')
 				put_player_right(game, j, i);
-			else if (game->map.line[k] == 'C' || game->map.line[k] == 'M')
-				put_potions_enemys(game, j, i, k);
+			else if (game->map.line[k] == 'C')
+				put_potions(game, j, i);
 			else
 				mlx_put_image_to_window(game->mlx, game->win,
 					game->map.cell, j * 32, i * 32);
@@ -87,8 +87,8 @@ void	write_map_a(t_game *game)
 				put_rocks_exit(game, j, i, k);
 			else if (game->map.line[k] == 'P')
 				put_player_left(game, j, i);
-			else if (game->map.line[k] == 'C' || game->map.line[k] == 'M')
-				put_potions_enemys(game, j, i, k);
+			else if (game->map.line[k] == 'C')
+				put_potions(game, j, i);
 			else
 				mlx_put_image_to_window(game->mlx, game->win,
 					game->map.cell, j * 32, i * 32);
@@ -116,8 +116,8 @@ void	write_map_d(t_game *game)
 				put_rocks_exit(game, j, i, k);
 			else if (game->map.line[k] == 'P')
 				put_player_right(game, j, i);
-			else if (game->map.line[k] == 'C' || game->map.line[k] == 'M')
-				put_potions_enemys(game, j, i, k);
+			else if (game->map.line[k] == 'C')
+				put_potions(game, j, i);
 			else
 				mlx_put_image_to_window(game->mlx, game->win,
 					game->map.cell, j * 32, i * 32);

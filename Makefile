@@ -6,7 +6,7 @@
 #    By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/22 15:42:10 by cyacoub-          #+#    #+#              #
-#    Updated: 2023/02/23 19:35:44 by cyacoub-         ###   ########.fr        #
+#    Updated: 2023/02/23 19:48:42 by cyacoub-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,6 @@ SRC = 	so_long.c\
 		map_errors.c\
 		map_errors2.c\
 		map_errors3.c\
-		enemy_move.c\
 		put_images.c\
 		map_route.c\
 		win_lost.c
