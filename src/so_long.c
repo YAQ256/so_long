@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:13:30 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/21 21:30:36 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:38:03 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	main(int argc, char *argv[])
 	t_game	game;
 
 	if (argc != 2)
-		return (0);
+		put_error_message("ERROR: Has to have an argument\n");
 	check_ber(argv[1]);
 	read_map(&game, argv[1]);
 	total_potion(&game);

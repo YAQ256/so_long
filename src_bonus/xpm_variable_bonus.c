@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:59:03 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/02/23 12:50:17 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:32:29 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 void	player_xpm(t_game *game)
 {
 	game->player.player_right = mlx_xpm_file_to_image(game->mlx,
-			"./textures/character_right.xpm", &game->img_width, &game->img_height);
+			"./textures/character_right.xpm",
+			&game->img_width, &game->img_height);
 	game->player.player_left = mlx_xpm_file_to_image(game->mlx,
-			"./textures/character_left.xpm", &game->img_width, &game->img_height);
+			"./textures/character_left.xpm",
+			&game->img_width, &game->img_height);
 	game->player.player_back = mlx_xpm_file_to_image(game->mlx,
-			"./textures/character_back.xpm", &game->img_width, &game->img_height);
+			"./textures/character_back.xpm",
+			&game->img_width, &game->img_height);
 	if (!(game->player.player_right || game->player.player_left
 			|| game->player.player_back))
 		xpm_error();
@@ -45,9 +48,11 @@ void	map_xpm(t_game *game)
 void	sprites_xpm(t_game *game)
 {
 	game->player.player_left_1 = mlx_xpm_file_to_image(game->mlx,
-			"./textures/character_left_1.xpm", &game->img_width, &game->img_height);
+			"./textures/character_left_1.xpm",
+			&game->img_width, &game->img_height);
 	game->player.player_right_1 = mlx_xpm_file_to_image(game->mlx,
-			"./textures/character_right_1.xpm", &game->img_width, &game->img_height);
+			"./textures/character_right_1.xpm",
+			&game->img_width, &game->img_height);
 	if (!(game->player.player_right_1 || game->player.player_left_1))
 		xpm_error();
 }

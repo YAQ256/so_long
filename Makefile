@@ -6,7 +6,7 @@
 #    By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/22 15:42:10 by cyacoub-          #+#    #+#              #
-#    Updated: 2023/02/23 19:29:31 by cyacoub-         ###   ########.fr        #
+#    Updated: 2023/02/23 19:35:44 by cyacoub-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ SRC_BONUS =	so_long_bonus.c\
 			win_lost_bonus.c
 
 SRCS = $(addprefix $(SRC_PATH), $(SRC))
-SRCS_BONUS = $(addprefix $(SRC_BONUS_PATH), $(SRC))
+SRCS_BONUS = $(addprefix $(SRC_BONUS_PATH), $(SRC_BONUS))
 
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
@@ -73,7 +73,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -I $(LIB) $(LIBFT) $(MLX) $(MLX_FLAGS) -o $(NAME)
 
 $(NAME_BONUS): $(OBJS_BONUS)
-	$(CC) $(CFLAGS) $(OBJS_BONUS) -I $(LIB_BONUS) $(LIBFT) $(MLX) $(MLX_FLAGS) -o $(NAME_BONUS)
+	$(CC) $(CFLAGS) $(OBJS_BONUS) -I $(LIB_BONUS) $(LIBFT) $(MLX) $(MLX_FLAGS) -o $(NAME)
 
 clean:
 	@rm -f $(OBJS) $(OBJS_BONUS)
