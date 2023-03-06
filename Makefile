@@ -6,7 +6,7 @@
 #    By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/22 15:42:10 by cyacoub-          #+#    #+#              #
-#    Updated: 2023/02/23 20:16:00 by cyacoub-         ###   ########.fr        #
+#    Updated: 2023/03/06 13:10:02 by cyacoub-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,6 +83,7 @@ fclean: clean
 	@rm -f $(NAME) $(NAME_BONUS)
 	@make fclean -C ./libft
 	@make clean -C ./mlx
+	@echo "All Clean"
 
 re: fclean all
 
